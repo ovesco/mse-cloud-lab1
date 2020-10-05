@@ -20,3 +20,7 @@ Because if this event, a lot of time was lost, hence the state of the script. Th
 
 ### Microsoft Azure (Olivier Kopp)
 For the automatic deployment, I used pre build images for the basic configuration. In addition, I used custom-data to change the config file on the backend (ejabberd.yml) and the index file on the frontend-end, according to the public ips allocated during provisioning. 
+
+
+### Amazon Web Services (Eric Tran)
+The deployment uses 3 AMI images as a base for the 3 modules (Database, Backend, Frontend). All the dynamics parameters are set up in all instances through the UserData during the deployment. An Elastic IP is allocated for the Backend instance to make the deployment easier with the script. Before running the script, you must ensure to not have any security group with the same name defined in the script and you need to have your aws credentials key set up and store in the following path (Linux/Unix) : ~/.aws/credentials.
